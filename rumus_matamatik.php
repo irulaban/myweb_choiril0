@@ -1,23 +1,24 @@
 <?php 
-    @$jarak = $_GET['jarak'];
-    @$waktu = $_GET['waktu'];
-    @$kecepatan = $jarak / $waktu;
+    @$panjang = $_GET['panjang'];
+    @$lebar = $_GET['lebar'];
+    @$luas = $panjang * $lebar;
+    @$keliling = 2 * ($panjang + $lebar);
 ?>
-
 <!DOCTYPE html>
 <hmtl>
     <head>
-        <title>KECEPATAN</title>
+        <title>PERSEGI PANJANG</title>
     </head>
     <body>
-        <form action="kecepatan(v).php" method="GET">
-            S (Jarak) = 
-            <input type="text" name="jarak" value="<?php echo $jarak; ?>"/> Km<br/>
-            t (Waktu) = 
-            <input type="text" name="waktu" value="<?php echo $waktu; ?>"/> jam<br/><br/>
+        <form method="GET">
+            p (panjang) = 
+            <input type="text" name="panjang" value="<?php echo $panjang; ?>"/>cm<br/>
+            l (lebar) = 
+            <input type="text" name="lebar" value="<?php echo $lebar; ?>"/>cm<br/>
             <input type="submit" name="submit" value="SUBMIT"/><br/><br/>
             <?php
-                echo "V(Kecepatan) = ".$kecepatan." Km/jam"; 
+                echo "Luas Persegi Panjang = ".$luas." cm^2<br/>";
+                echo "Keliling Persegi Panjang = ".$keliling," cm";
             ?>
         </form>
     </body>
